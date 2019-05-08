@@ -1,0 +1,61 @@
+.c-project{}
+
+.c-project-list{
+  margin: 0 $space-s;
+  padding: 0;
+  list-style: none;
+
+  @media all and (min-width: $tablet) {
+    margin: 0 $space-m;
+  }
+
+  @media all and (min-width: $desktop) {
+    margin: 0 $space-l;
+  }
+
+  &__item{
+    display: inline-block;
+    padding: $space-inset-s;
+    opacity:0;
+    top: 100px;
+    transition: top .5s ease, opacity .5s ease;
+    transition-delay: .5s;
+    width: 100%;
+
+    &.is-unveiled{
+      top: 0;
+      opacity:1;
+    }
+
+    @media all and (min-width: $phablet) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $tablet) {
+      padding: $space-inset-m;
+      width: 50%;
+    }
+
+    @media all and (min-width: $desktop) {
+      padding: $space-inset-l;
+      width: 33.333%;
+    }
+
+    @media all and (min-width: $laptop) {
+      width: 25%;
+    }
+
+    figure{
+      position: relative;
+
+      figcaption{
+        display: block;
+        position: absolute;
+        top:50%;
+        text-align: center;
+        transform: translateY(-50%);
+        width: 100%;
+      }
+    }
+  }
+}

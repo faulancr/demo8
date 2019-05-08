@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-24T00:00:00Z" product-name="in2template">
+		<header />
+		<body>
+			<trans-unit id="constants.category.basic.defaultheadertype">
+				<source>Default Header type: Enter the number of the header layout to be used by default</source>
+			</trans-unit>
+			<trans-unit id="constants.category.basic.maximagewidth">
+				<source>Maximum required image sizes</source>
+			</trans-unit>
+
+
+			<trans-unit id="constants.category.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="constants.category.url.baseurl">
+				<source>Base URL (without http, e.g. "www.domainname.de")</source>
+			</trans-unit>
+
+			<!-- Content Elements -->
+			<trans-unit id="content.div">
+				<source>in2code.de</source>
+			</trans-unit>
+
+			<trans-unit id="content.accordion">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.description">
+				<source>Accordion element</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements">
+				<source>Accordion elements</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element">
+				<source>Element</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element.text">
+				<source>Text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

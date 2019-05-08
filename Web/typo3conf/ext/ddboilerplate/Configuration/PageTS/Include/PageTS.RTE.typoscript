@@ -1,0 +1,15 @@
+/**
+* RTE-Konfiguration
+* Hier einige Voreinstellungen um den RTE übersichtlicher zu machen
+* TODO: Restliche RTE Einstellungen projektabhängig treffen!
+*/
+
+RTE {
+    default.preset = default
+    config {
+        tt_content.bodytext {
+            preset = default
+            types.text.preset = myConfig
+        }
+    }
+}

@@ -1,0 +1,18 @@
+# Overwrite Default Fluid Templates with own rendering definition
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateRootPaths {
+        10 = EXT:ddboilerplate/Resources/Private/Templates/FluidStyledContent/
+    }
+    partialRootPaths {
+        10 = EXT:ddboilerplate/Resources/Private/Partials/FluidStyledContent/
+    }
+    layoutRootPaths {
+        10 = EXT:ddboilerplate/Resources/Private/Layouts/FluidStyledContent/
+    }
+}
+
+lib.pageTitle = TEXT
+lib.pageTitle.data = page:title
+
+

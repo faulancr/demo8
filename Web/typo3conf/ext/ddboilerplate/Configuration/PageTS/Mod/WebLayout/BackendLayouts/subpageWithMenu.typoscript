@@ -1,0 +1,37 @@
+#######################################################
+#### BACKENDLAYOUT: SUBPAGE ####
+#######################################################
+mod {
+	web_layout {
+		BackendLayouts {
+			SubpageWithMenu {
+				title = LLL:EXT:ddboilerplate/Resources/Private/Language/backend.xlf:backend_layout.subpageWithMenu
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 2
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ddboilerplate/Resources/Private/Language/backend.xlf:backend_layout.subpage.colPos.0
+										colPos = 1
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ddboilerplate/Resources/Private/Language/backend.xlf:backend_layout.subpage.colPos.0
+										colPos = 0
+									}
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:ddboilerplate/Resources/Public/Images/Backend/Layouts/Subpage.png
+			}
+		}
+	}
+}

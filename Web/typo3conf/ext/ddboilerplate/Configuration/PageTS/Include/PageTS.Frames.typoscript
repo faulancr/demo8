@@ -1,0 +1,18 @@
+/**
+* Hier befindet sich die zusätzlichen Auswahlmöglichkeiten
+* für Frames (Indentions and Frames) im Backend
+*
+* Konfiguration der Frames für das Frontend unter:
+* Resources/Private/Typoscript/Setup/Content/Content.Frames.typoscript
+*/
+
+TCEFORM.tt_content.section_frame {
+	# Löschen der mitgelieferten Einträge
+	removeItems = 66,1,5,6,10,11,12,20,21
+
+	# Hinzufügen von neuen Elementen
+	addItems {
+		# Hier das Beispiel für die Klasse "video" (siehe Content.Frames.typoscript):
+		# 100 = Embedded Video
+	}
+}

@@ -1,0 +1,27 @@
+/**
+ * Final main CSS file built-up of separated Sass files with @import directive.
+ */
+
+@import '01_modules/mixins';
+@import '01_modules/settings';
+@import '01_modules/settings_colors';
+@import '01_modules/settings_fonts';
+@import '01_modules/normalize';
+@import '01_modules/animation';
+
+@import '02_vendor/slick';
+@import '02_vendor/fsc';
+@import '02_vendor/pswp_main';
+@import '02_vendor/pswp_skin_default';
+
+@import '03_pattern/general';
+@import '03_pattern/icons';
+@import '03_pattern/images';
+
+@import '04_component/navigation';
+@import '04_component/slider';
+@import '04_component/project';
+@import '04_component/profile';
+@import '04_component/video';
+
+@import '05_layout/layout';

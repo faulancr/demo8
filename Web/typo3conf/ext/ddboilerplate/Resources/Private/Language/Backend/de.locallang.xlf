@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-12-24T00:00:00Z" product-name="in2template">
+		<header />
+		<body>
+			<!-- Content Elements -->
+			<trans-unit id="content.div">
+				<source>in2code.de</source>
+				<target>in2code.de</target>
+			</trans-unit>
+
+			<trans-unit id="content.accordion">
+				<source>Accordion</source>
+				<target>Accordion</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.description">
+				<source>Accordion element</source>
+				<target>Accordion Element</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main">
+				<source>Accordion</source>
+				<target>Accordion</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements">
+				<source>Accordion elements</source>
+				<target>Accordion Elemente</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element">
+				<source>Element</source>
+				<target>Element</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="content.accordion.flexform.main.elements.element.text">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

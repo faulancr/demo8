@@ -1,0 +1,47 @@
+.js-page__animation--loaded{
+
+  .header,
+  .content,
+  .footer{
+    transition: opacity .5s ease;
+    opacity: 1;
+  }
+
+  .logo-loader {
+    stroke-dasharray: 750;
+    stroke-dashoffset: 750;
+    animation: dash 2s linear alternate 2;
+  }
+}
+
+.js-page__animation--is-loading{
+  body{
+    overflow:hidden;
+  }
+
+  .header,
+  .content,
+  .footer{
+    transition: opacity .5s ease;
+    //opacity: 0;
+  }
+
+  .logo-loader {
+    stroke-dasharray: 750;
+    stroke-dashoffset: 750;
+    animation: dash 2s linear alternate infinite;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 750;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.logo-loader__path{
+  stroke: $white;
+}

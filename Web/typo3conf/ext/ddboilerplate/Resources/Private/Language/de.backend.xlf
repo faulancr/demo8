@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-12-24T00:00:00Z" product-name="in2template">
+		<header />
+		<body>
+			<!-- Backend layout -->
+			<trans-unit id="backend_layout.default">
+				<source>Default</source>
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.default.colPos.0">
+				<source>Content</source>
+				<target>Inhalt</target>
+			</trans-unit>
+
+			<trans-unit id="backend_layout.subpage">
+				<source>Subpage</source>
+				<target>Unterseite</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.subpage.colPos.0">
+				<source>Slider</source>
+				<target>Slider</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.subpage.colPos.1">
+				<source>Content</source>
+				<target>Inhalt</target>
+			</trans-unit>
+
+			<!-- Content Elements -->
+			<trans-unit id="content.div">
+				<source>Fotografie Frei</source>
+				<target>Fotografie Frei</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

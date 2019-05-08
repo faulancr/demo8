@@ -1,0 +1,83 @@
+lib.navigation.main = HMENU
+lib.navigation.main {
+	1 = TMENU
+	1 {
+		expAll = 1
+		NO = 1
+		NO {
+			ATagTitle.field = abstract // description // title
+			ATagParams = class="c-nav-main__link intern"
+			ATagParams.insertData = 1
+			wrapItemAndSub = <li class="c-nav-main__item">|</li>
+			wrapItemAndSub.override.cObject = COA
+			wrapItemAndSub.override.cObject {
+				if {
+					value = 4
+					equals.field = doktype
+					isTrue = 1
+					isTrue.if {
+						value.data = TSFE:page|uid
+						equals.field = shortcut
+					}
+				}
+
+				10 = TEXT
+				10.value = <li class="c-nav-main__item">|</li>
+			}
+		}
+
+		ACT < .NO
+		ACT.ATagParams = class="c-nav-main__link c-nav-main__link--active intern"
+		ACT.wrapItemAndSub = <li class="c-nav-main__item c-nav-main__item--active">|</li>
+
+		IFSUB < .NO
+		IFSUB.wrapItemAndSub = <li class="c-nav-main__item c-nav-main__item--has-submenu">|</li>
+
+		ACTIFSUB < .IFSUB
+		ACTIFSUB.ATagParams = class="c-nav-main__link c-nav-main__link--active intern"
+		ACTIFSUB.wrapItemAndSub = <li class="c-nav-main__item c-nav-main__item--active c-nav-main__item--has-submenu">|</li>
+
+		wrap = <ul class="c-nav-main__lvl-0">|</ul>
+	}
+
+#	2 < .1
+#	2.wrap = <ul class="navigation__level-2 navigation__sub-item">|</ul>
+#	3 < .1
+#	3.wrap = <ul class="navigation__level-3 navigation__sub-item">|</ul>
+}
+
+lib.navigation.pageSlide = HMENU
+lib.navigation.pageSlide {
+	special = browse
+	special {
+		items = prev|next
+	}
+
+	1 = TMENU
+	1 {
+		wrap = <ul class="c-nav-page">|</ul>
+		expAll = 1
+		NO = 1
+		NO {
+			ATagTitle.field = abstract // description // title
+			ATagParams = class="c-nav-page__link intern"
+			ATagParams.insertData = 1
+			wrapItemAndSub = <li class="c-nav-page__item">|</li>
+		}
+
+		ACT < .NO
+		ACT.ATagParams = class="c-nav-main__link c-nav-main__link--active intern"
+		ACT.wrapItemAndSub = <li class="c-nav-main__item c-nav-main__item--active">|</li>
+	}
+}
+
+lib.navigation.testbase < lib.navigation.main
+lib.navigation.testbase {
+	includeNotInMenu = 1
+	excludeDoktypes = 999
+	special = directory
+	special.value = 2
+	1 {
+		excludeDoktypes = 999
+	}
+}

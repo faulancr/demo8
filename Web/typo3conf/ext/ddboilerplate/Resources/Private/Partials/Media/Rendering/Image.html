@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:dd="http://typo3.org/ns/Faulancr/DdBoilerplate/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{file.extension} == 'gif'">
+    <f:then>
+        <dd:animatedGif file="{file}" class="image-embed-item" />
+    </f:then>
+    <f:else>
+        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" />
+    </f:else>
+</f:if>
+</html>

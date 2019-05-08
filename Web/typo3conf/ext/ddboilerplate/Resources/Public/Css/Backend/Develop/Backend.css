@@ -1,0 +1,7 @@
+.topbar-header-site{
+  background-color: #2969B0;
+}
+
+.topbar-header-site:after, .topbar-header-site:before {
+  display: none;
+}

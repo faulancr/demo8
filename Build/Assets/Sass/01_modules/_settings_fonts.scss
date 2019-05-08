@@ -1,0 +1,87 @@
+/*
+Fonts
+*/
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('Fonts/PTS55F-webfont.eot');
+  src: url('Fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Fonts/PTS55F-webfont.woff') format('woff'),
+  url('Fonts/PTS55F-webfont.ttf') format('truetype'),
+  url('Fonts/PTS55F-webfont.svg#pt_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nexa_boldregular';
+  src: url('Fonts/Nexa_Free_Bold-webfont.woff2') format('woff2'),
+  url('Fonts/Nexa_Free_Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nexa_lightregular';
+  src: url('Fonts/Nexa_Free_Light-webfont.woff2') format('woff2'),
+  url('Fonts/Nexa_Free_Light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+//$base-font: 'pt_sansregular', sans-serif;
+$base-font: 'nexa_lightregular', sans-serif;
+$font-light: 'nexa_lightregular', sans-serif;
+$font-bold: 'nexa_boldregular', sans-serif;
+
+
+/**
+ * Use relative values like rem, em or %. Otherwise text zoom of IE won't work,
+ * which is an accessibility issue
+ * (http://testen.bitv-test.de/index.php?a=di&iid=52&s=n). Using rem has the
+ * benefit that the value is always equivalent to 16px and not depending on
+ * the location.
+ */
+
+$base-font-size: 1rem;
+$base-font-lineheight: 1.5;
+$base-font-weight: 400;
+$base-font-weight--light: $font-light;
+$base-font-weight--bold: $font-bold;
+
+$font__size--small: 0.75rem;        //12px
+$font__size--para: 0.875rem;        //14px
+$font__size--para-plus: 1.125rem;   //18px
+$font__size--small-medium: 1.25rem; //20px
+$font__size--medium: 1.5rem;        //24px
+$font__size--large: 2rem;           //32px
+
+
+.font{
+  &--light{
+    font-weight: $font-light;
+  }
+
+  &--bold{
+    font-weight: $font-bold;
+  }
+
+  &--xl{
+    font-size: 2rem;
+  }
+
+  &--wide{
+    letter-spacing: 1px;
+  }
+
+  &--extrawide{
+    letter-spacing: 2px;
+  }
+}
+
+.text{
+  &--break{
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,12 @@
+<nav class="c-nav-main {f:if(condition: '{data.backend_layout} == 1', then: 'nav-home')}" data-spy="affix" data-offset-top="110">
+	<a href="#main-nav" class="c-nav-main__toggle">
+		<svg class="icon nav-hamburger" viewBox="0 0 18 16">
+			<use xlink:href="typo3conf/ext/ddboilerplate/Resources/Public/Images/Icons/ff-icon-sprite.svg#icon--hamburger"></use>
+		</svg>
+		<svg class="icon nav-close" viewBox="0 0 16 16">
+			<use xlink:href="typo3conf/ext/ddboilerplate/Resources/Public/Images/Icons/ff-icon-sprite.svg#icon--close"></use>
+		</svg>
+		<span class="svg-fallback">MENU</span>
+	</a>
+	<f:cObject typoscriptObjectPath="lib.navigation.main" />
+</nav>

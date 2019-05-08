@@ -1,0 +1,24 @@
+{
+  "name": "ddboilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Sass and Gulp",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-uglify": "^2.1.2",
+    "pump": "^1.0.2",
+    "sassdoc": "^2.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Doering",
+  "license": "ISC"
+}

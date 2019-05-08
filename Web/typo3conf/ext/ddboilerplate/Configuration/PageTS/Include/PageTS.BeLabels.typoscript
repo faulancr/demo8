@@ -1,0 +1,11 @@
+/**
+* Änderungen der originalen Labels im BE
+*/
+
+TCEFORM {
+	pages {
+		# Beispiel für das Feld "Author":
+		# author.label.default = Title for Headerimage
+		# author.label.de = Titel für Kopfbild
+	}
+}

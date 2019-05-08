@@ -1,0 +1,18 @@
+/**
+* Hier befindet sich die zusätzlichen Auswahlmöglichkeiten
+* für Layouts bei Inhaltselementen im Backend
+*
+* Konfiguration der Layouts für das Frontend unter:
+* Resources/Private/Typoscript/Setup/Content/Content.Layouts.typoscript
+*/
+
+TCEFORM.tt_content.layout {
+	# Löschen der mitgelieferten Layouts
+	removeItems = 1,2,3
+
+	# eigene Layouts hinzufügen
+	addItems {
+		# Hier das Beispiel für das Element "info" (siehe Content.Layouts.typoscript):
+		10 = Responsive Image
+	}
+}

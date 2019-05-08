@@ -1,0 +1,14 @@
+<f:layout name="Default"/>
+<f:section name="Main">
+	<div class="container">
+		<f:cObject typoscriptObjectPath="lib.content" data="0">
+			Hier ist der Inhalt der Hauptspalte
+		</f:cObject>
+		<f:render partial="Navigation/Main">
+			Navigation
+		</f:render>
+		<f:cObject typoscriptObjectPath="lib.content" data="1">
+			Hier ist 	der Inhalt der Hauptspalte
+		</f:cObject>
+	</div>
+</f:section>

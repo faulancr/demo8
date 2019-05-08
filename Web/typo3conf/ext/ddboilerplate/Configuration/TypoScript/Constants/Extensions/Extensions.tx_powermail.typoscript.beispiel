@@ -1,0 +1,22 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/constants.txt">
+
+# Diese Zeilen bitte nicht einfach übernehmen, sondern nicht benötigte löschen bzw anpassen!
+plugin.tx_powermail {
+	view {
+		partialRootPath = EXT:ddboilerplate/Resources/Private/Partials/Extensions/
+		templateRootPath = EXT:ddboilerplate/Resources/Private/Templates/Extensions/
+	}
+	settings {
+		receiver {
+			senderName = Mail receiver Subsystem
+			senderEmail = hello@dirkdoering.de
+		}
+		sender {
+			senderName = Mail sender Subsystem
+			senderEmail = hello@dirkdoering.de
+		}
+		misc {
+			htmlField = 1
+		}
+	}
+}

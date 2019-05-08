@@ -1,0 +1,27 @@
+/**
+* Einbinden der Typoscript-Dateien
+*
+* Hier findet die Einbindung aller benötigten Typoscript-Dateien
+* für die Konfiguration von TYPO3 statt!
+*
+* Beispiel: <INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Resources/Private/Typoscript/PfadZurDatei.typoscript">
+*/
+
+
+# Rendering der Contentelemente
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/Content" extensions="typoscript">
+
+# Eigene Content Elemente
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/ContentElement" extensions="typoscript">
+
+# Globale Einstellungen der Seiten aus Resources/Private/Typoscript/Setup/Page
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/Page" extensions="typoscript">
+
+# Includes von setup files von anderen Extensions und deren überschriebenes TS
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/Extensions" extensions="typoscript">
+
+# Alle Typoscript-Objekte für das Layout aus Resources/Private/Typoscript/Setup/Tsobjects
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/Tsobjects" extensions="typoscript">
+
+# TypoScript Dateien für die lokale Entwicklung (unversioniert)
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Setup/Development" extensions="typoscript">

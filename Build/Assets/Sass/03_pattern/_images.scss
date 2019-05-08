@@ -1,0 +1,190 @@
+figure {
+  margin: 0;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 48px;
+  transition: max-width 0.2s ease;
+  width: 24px;
+
+  @media all and (min-width: $tablet) {
+    //max-width: 50px;
+  }
+
+  svg{
+    height:32px;
+    min-height: 24px;
+    width: 24px;
+  }
+}
+
+/*
+  Hero Image
+ */
+
+.c-heromedia{
+  margin: 48px 12px 12px;
+
+  @media all and (min-width: $tablet) {
+    margin: $gutter-dynamic*4 $gutter-dynamic $gutter-dynamic;
+  }
+
+  picture{
+    display: block;
+    text-align: center;
+  }
+
+  img{
+    max-height: calc(100vh - 10vw);
+    width:auto;
+  }
+}
+
+/* SADIE Hover effect */
+
+/* Common style */
+
+.c-project-list__item {
+
+  figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  figure img {
+    position: relative;
+    display: block;
+    //min-height: 100%;
+    max-width: 100%;
+  }
+
+  figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  figure figcaption::before,
+  figure figcaption::after {
+    pointer-events: none;
+  }
+
+  figure figcaption,
+  figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Anchor will cover the whole item by default */
+  figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+
+  figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+  }
+
+  figure h2 span {
+    font-family: $font-bold;
+  }
+
+  figure h2,
+  figure p {
+    margin: 0;
+  }
+
+  figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+  }
+}
+
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+
+figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  content: '';
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+}
+
+figure.effect-sadie h2 {
+  opacity:0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #484c61;
+  transition: transform 0.35s, color 0.35s, opacity 0.35s;
+  transform: translate3d(0, -150%, 0);
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-sadie:hover img {
+  opacity: .8;
+}
+
+figure.effect-sadie:hover h2 {
+  color: #fff;
+  opacity:1;
+  transform: translate3d(0, -50%, 0);
+}
+
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-sadie video {
+  display: block;
+  transform: scale(1.01); //Videos have sometimes 1px black border, we use css to overflow it
+}
+
+
+/*
+ * PSWP - Images
+ */
+
+.pswp__img{
+  //box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}

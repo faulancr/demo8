@@ -1,0 +1,217 @@
+/**
+* Backendkonfiguration für BE-User
+* Hier können Rechte für Sichtbarkeit der Felder/Reiter usw. eingestellt werden.
+*/
+
+# Rechte auf die Seiten (Eigentümer, Gruppe, Alle) einstellen
+TCEMAIN.permissions {
+	# TODO: ID der "pageaccess"-Gruppe (Gruppe der alle Seiten gehören) eintragen
+	groupid = 1
+	user = show,edit,delete,new,editcontent
+	group = show,edit,delete,new,editcontent
+}
+
+# Benutzerrechte im BE konfigurieren
+#
+# Grundsätzlich werden ALLE Felder ausgeblendet und dann über Conditions den einzelnen Gruppen wieder gegeben.
+# Dazu einfach die Zeile aus der "pageaccess"-Gruppe kopieren, in der jeweiligen Condition der gewünschten Gruppe
+# einfügen und den Wert auf "0" setzen.
+# Bei Dropdowns können die gewünschten Option mit "removeItems := removeFromList(gewünschte,Optionen)"
+# wieder eingeblendet werden.
+#
+# Das Ausblenden aller Felder wird auf die PAGEACCESS-Gruppe angewendet, da jeder Benutzer diese haben muss.
+# TODO: ID der "pageaccess"-Gruppe (Gruppe der alle Seiten gehören) eintragen
+[usergroup = 1]
+	TCEFORM {
+		# Konfiguration für Pages
+		pages {
+			# Reiter "General"
+			doktype {
+				disabled = 1
+				removeItems := addToList(1,6,4,7,3,254,255,199)
+			}
+
+			title.disabled = 1
+			nav_title.disabled = 1
+			subtitle.disabled = 1
+			tx_realurl_pathsegment.disabled = 1
+			tx_realurl_pathoverride.disabled = 1
+			tx_realurl_exclude.disabled = 1
+			# Reiter "Access"
+			hidden.disabled = 1
+			nav_hide.disabled = 1
+			starttime.disabled = 1
+			endtime.disabled = 1
+			extendToSubpages.disabled = 1
+			fe_group.disabled = 1
+			fe_login_mode.disabled = 1
+			# Reiter "Metadata"
+			abstract.disabled = 1
+			keywords.disabled = 1
+			description.disabled = 1
+			author.disabled = 1
+			author_email.disabled = 1
+			lastUpdated.disabled = 1
+			# Reiter "Appearance"
+			layout.disabled = 1
+			newUntil.disabled = 1
+			backend_layout.disabled = 1
+			backend_layout_next_level.disabled = 1
+			content_from_pid.disabled = 1
+			# Reiter "Behaviour"
+			alias.disabled = 1
+			target.disabled = 1
+			url_scheme.disabled = 1
+			cache_timeout.disabled = 1
+			cache_tags.disabled = 1
+			no_cache.disabled = 1
+			l18n_cfg.disabled = 1
+			is_siteroot.disabled = 1
+			no_search.disabled = 1
+			editlock.disabled = 1
+			php_tree_stop.disabled = 1
+			module.disabled = 1
+			# Reiter "Resources"
+			media.disabled = 1
+			storage_pid.disabled = 1
+			TSconfig.disabled = 1
+			tsconfig_includes.disabled = 1
+			# Reiter "Categories"
+			categories.disabled = 1
+		}
+
+		# Konfiguration für Contentelemente
+		tt_content {
+			# Reiter "General"
+			CType {
+				disabled = 1
+				removeItems := addToList(header,text,textpic,image,bullets,table,uploads,mailform,login,search,multimedia,media,menu,shortcut,list,div,html)
+			}
+
+			colPos.disabled = 1
+			sys_language_uid.disabled = 1
+			header.disabled = 1
+			header_layout.disabled = 1
+			header_position.disabled = 1
+			date.disabled = 1
+			header_link.disabled = 1
+			subheader.disabled = 1
+			rte_enabled.disabled = 1
+			rowDescription.disabled = 1
+			# Reiter "Images"
+			image_zoom.disabled = 1
+			# Reiter "Table"
+			cols.disabled = 1
+			# Reiter "General" bei "SpecialMenu"
+			menu_type {
+				disabled = 1
+				removeItems := addToList(0,1,4,7,2,8,3,5,6,categorized_pages,categorized_pages,categorized_content)
+			}
+
+			accessibility_title.disabled = 1
+			accessibility_bypass.disabled = 1
+			accessibility_bypass_text.disabled = 1
+			# Reiter "Appearance"
+			layout.disabled = 1
+			spaceAfter.disabled = 1
+			spaceBefore.disabled = 1
+			imageborder.disabled = 1
+			image_compression.disabled = 1
+			image_effects.disabled = 1
+			imageorient {
+				disabled = 1
+				removeItems := addToList(0,1,2,8,9,10,17,18,25,26)
+			}
+
+			imagecols.disabled = 1
+			image_noRows.disabled = 1
+			imagecaption_position.disabled = 1
+			imagewidth.disabled = 1
+			imageheight.disabled = 1
+			# Reiter "Media"
+			assets.disabled = 1
+			# Reiter "Access"
+			hidden.disabled = 1
+			sectionIndex.disabled = 1
+			linkToTop.disabled = 1
+			starttime.disabled = 1
+			endtime.disabled = 1
+			fe_group.disabled = 1
+			editlock.disabled = 1
+			# Reiter "Behaviour"
+			pages.disabled = 1
+			select_key.disabled = 1
+			recursive.disabled = 1
+			# Reiter "Categories"
+			categories.disabled = 1
+		}
+
+		# Hier die Konfiguraton für die verwendeten Extensions, z.B. news:
+		news {
+
+		}
+	}
+
+	# im Modul "Liste" auf der Rootebene die unwichtigen Static-Tables ausblenden (z.B. Länder, Währung usw.)
+	mod {
+		web_list {
+			# Hide static_info_tables records on the rootpage
+			hideTables = static_template,static_countries,static_country_zones,static_currencies,static_languages,static_territories,static_taxes,static_markets
+		}
+	}
+[end]
+
+# Editor-Gruppe
+# TODO: ID der "priv-content"-Gruppe (Privileg zum Seiteninhalt anlegen/ändern/löschen) hier eintragen
+[usergroup = 2]
+	TCEFORM {
+		# Konfiguration für Contentelemente
+		tt_content {
+			# Reiter "General"
+			CType {
+				disabled = 0
+				removeItems := removeFromList(header,text,textpic,image,shortcut,list)
+			}
+
+			header.disabled = 0
+			header_layout.disabled = 0
+			# Reiter "Appearance"
+			layout.disabled = 0
+			imageorient {
+				disabled = 0
+				removeItems := removeFromList(0,1,2,8,9,10,17,18,25,26)
+			}
+
+			imagecols.disabled = 0
+			# Reiter "Access"
+			hidden.disabled = 0
+		}
+
+		# Hier die Konfiguraton für die verwendeten Extensions, z.B. news:
+	}
+[end]
+
+# Manager-Gruppe
+# TODO: ID der "priv-page"-Gruppe (Privileg zum Seiten anlegen/ändern/löschen) hier eintragen
+[usergroup = 3]
+	TCEFORM {
+		# Konfiguration für Pages
+		pages {
+			# Reiter "General"
+			doktype {
+				disabled = 0
+				removeItems := removeFromList(1,6,4,3,254)
+			}
+
+			title.disabled = 0
+			# Reiter "Access"
+			hidden.disabled = 0
+			nav_hide.disabled = 0
+			# Reiter "Metadata"
+			description.disabled = 0
+			# Reiter "Appearance"
+			backend_layout.disabled = 0
+			backend_layout_next_level.disabled = 0
+		}
+	}
+[end]

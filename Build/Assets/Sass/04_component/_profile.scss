@@ -1,0 +1,122 @@
+.c-profile {
+  //min-height: 100vh;
+
+  overflow: hidden;
+
+  &__inner{
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    max-width: $fullhd;
+
+    @media all and (min-width: $tablet) {
+      flex-flow: row;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    &:nth-child(2n) {
+      background: $whitegrey;
+
+      .c-profile__image {
+        order: 1;
+      }
+
+      .c-profile__image {
+        opacity: 0;
+        transform: translate3d(20%, 0, 0);
+      }
+
+      &.is-unveiled{
+        .c-profile__image {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 1 1 100%;
+    opacity: 0;
+    padding: $space-inset-s;
+    transform: translate3d(-20%, 0, 0);
+    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 1s 0.5s;
+    width:100%;
+
+    .is-unveiled &{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media all and (min-width: $tablet) {
+      padding: $space-inset-l;
+    }
+
+    @media all and (min-width: $desktop) {
+      padding: $space-inset-xl;
+    }
+  }
+
+  &__text {
+    flex: 1 1 100%;
+    padding: $space-inset-s;
+
+    @media all and (min-width: $tablet) {
+      padding: $space-inset-l;
+    }
+
+    @media all and (min-width: $desktop) {
+      padding: $space-inset-xl;
+    }
+  }
+
+  &__header{
+    font-size: 2rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @media all and (min-width: $tablet) {
+      font-size: 1.5rem;
+    }
+
+    @media all and (min-width: $desktop) {
+      font-size: 3rem;
+    }
+  }
+
+  &__surname{
+    font-family: $font-bold;
+    font-weight: bold;
+  }
+
+  &__bodytext {
+    max-width: 500px;
+    margin-left: $space-s;
+
+    @media all and (min-width: $tablet) {
+      margin-left: $space-l;
+    }
+
+    @media all and (min-width: $desktop) {
+      margin-left: $space-xl;
+    }
+
+    p{
+      font-size: $font__size--para;
+
+      @media all and (min-width: $desktop) {
+        font-size: $font__size--para-plus;
+      }
+
+      @media all and (min-width: $desktop-wide) {
+        font-size: $font__size--small-medium;
+      }
+    }
+  }
+
+  &--vimeo{
+
+  }
+}

@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:dd="http://typo3.org/ns/Faulancr/DdBoilerplate/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <f:if condition="{menu}">
+        <ul class="c-project-list">
+            <f:for each="{menu}" as="page">
+                <li class="c-project-list__item">
+                    <a href="{page.link}" target="{page.target}" title="{page.title}">
+                        <f:if condition="{page.files.0}">
+                        <figure class="effect-sadie">
+                            <f:if condition="{page.files.0.extension} == 'gif'">
+                                <f:then>
+                                    <dd:animatedGif file="{page.files.0}" class="lazy-image" />
+                                </f:then>
+                                <f:else>
+                                    <picture>
+                                        <source srcset="{f:uri.image(image:page.files.0, maxWidth: '320')} 320w,
+                                                        {f:uri.image(image:page.files.0, maxWidth: '640')} 640w" >
+                                        <img class="lazy-image" src="{f:uri.image(image:page.files.0, maxWidth: '640')}" alt="{page.files.0.alt}" title="{page.files.0.title}" />
+                                    </picture>
+                                </f:else>
+                            </f:if>
+                            <figcaption>
+                                <h2>{page.title}</h2>
+                            </figcaption>
+                        </figure>
+                        </f:if>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+</html>

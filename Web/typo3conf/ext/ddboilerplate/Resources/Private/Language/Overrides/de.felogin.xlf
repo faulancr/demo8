@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-03-9T15:06:32Z"
+          product-name="felogin">
+        <header/>
+        <body>
+            <trans-unit id="username">
+                <source>Username:</source>
+                <target>Benutzername</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>Password:</source>
+                <target>Passwort:</target>
+            </trans-unit>
+            <trans-unit id="ll_welcome_message">
+                <source>Enter your username and password here in order to log in on the website:</source>
+                <target>Diese Seite ist nur für Stipendiat_innen der Friedriche-Ebert-Stiftung. Sollten Sie noch keine
+                    Nutzerdaten haben, können Sie sich registrieren.</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>Login</source>
+                <target>Jetzt einloggen</target>
+            </trans-unit>
+            <trans-unit id="permalogin">
+                <source>Stay logged in:</source>
+                <target>Login merken</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

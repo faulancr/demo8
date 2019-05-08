@@ -1,0 +1,16 @@
+/**
+* Einbinden der TSconfig-Dateien zur Konfiguration des Backends
+*
+* Hier findet die Einbindung aller benötigten Typoscript-Dateien
+* für das Layout statt!
+*
+* Beispiel: <INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/NAME-DER-DATEI.typoscript">
+*/
+
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.BeLayout.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.Userrights.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.BeDefaultSettings.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.BeLabels.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.Frames.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.Layouts.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:ddboilerplate/Configuration/PageTS/Include/PageTS.RTE.typoscript">

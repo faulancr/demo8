@@ -1,0 +1,65 @@
+/**
+* Hier befindet sich die zusätzlichen Einbindungen im HTML
+* z.B. Header-Angaben, Javascript und Stylesheets
+*/
+
+page {
+	# die CSS Dateien
+	includeCSS.basic = EXT:ddboilerplate/Resources/Public/Css/basic.css
+	includeCSS.print = EXT:ddboilerplate/Resources/Public/Css/print.css
+	includeCSS.print.media = print
+
+	# HTML5shiv für alte IEs und IE-Stylesheets, zusätzliche Icons und weitere
+	# Link-Tags oder Meta-Tags (z. B. Google Fonts)
+
+	headerData.10 = TEXT
+	headerData.10.value (
+<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/manifest.json">
+<link rel="mask-icon" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/safari-pinned-tab.svg" color="#000000">
+<link rel="shortcut icon" href="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/favicon.ico">
+<meta name="msapplication-config" content="/typo3conf/ext/ddboilerplate/Resources/Public/Favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+	)
+
+	# requirejs
+	footerData.123 = COA
+	footerData.123 {
+		5 = TEXT
+		5 {
+			wrap= <script> | </script>
+			value = requireJsBasePath = '/{path:EXT:ddboilerplate/Resources/Public/JavaScripts/}'
+			stdWrap.insertData = 1
+		}
+		10 = TEXT
+		10.value = <script
+		20 = TEXT
+		20 {
+			value = /{path:EXT:ddboilerplate/Resources/Public/JavaScripts/Vendor/require.js}
+			stdWrap.insertData = 1
+			wrap = src="|"
+			noTrimWrap = | ||
+		}
+		30 = TEXT
+		30 {
+			value = /{path:EXT:ddboilerplate/Resources/Public/JavaScripts/main.js}
+			stdWrap.insertData = 1
+			wrap = data-main="|"
+			noTrimWrap = | ||
+		}
+		40 = TEXT
+		40.value = ></script>
+	}
+
+#	includeJSFooterlibs {
+#		jquery = EXT:ddboilerplate/Resources/Public/JavaScripts/001_jquery-3.2.0.min.js
+#		slick = EXT:ddboilerplate/Resources/Public/JavaScripts/010_slick.min.js
+#		main = EXT:ddboilerplate/Resources/Public/JavaScripts/100__basic.js
+#	}
+}

@@ -1,0 +1,59 @@
+#
+# Definitions of the constants in the template
+# Constants are written uppercase (PHP coding guidelines):
+# http://php.net/manual/de/language.constants.php
+#
+
+
+# UIDs for pages
+UID {
+
+}
+
+# Paths that are required
+PATH {
+	IMAGES = EXT:ddboilerplate/Resources/Public/Images
+	IMAGESABSOLUTE = /typo3conf/ext/ddboilerplate/Resources/Public/Images
+}
+
+# -----------------
+# content settings
+# -----------------
+
+# TODO: set default heading (here H2)
+# cat=plugin.tx_in2template_basic/basic/0001; type=int; label=LLL:EXT:ddboilerplate/Resources/Private/Language/Backend/locallang.xlf:constants.category.basic.defaultheadertype
+content.defaultHeaderType = 2
+
+SETTING {
+	# TODO: maximum required image sizes
+	# cat=plugin.tx_in2template_basic/basic/0002; type=int; label=LLL:EXT:ddboilerplate/Resources/Private/Language/Backend/locallang.xlf:constants.category.basic.maximagewidth
+	MAXIMAGEWIDTH = 1920
+}
+
+# -------------
+# URL Handling
+# -------------
+
+# identify protocol
+PROTOCOL = http://
+[globalString = IENV:TYPO3_SSL = 1]
+	PROTOCOL = https://
+[end]
+
+# all URLs in here;
+# TODO: Enter the correct domain to the XXXX
+
+# customsubcategory=url=LLL:EXT:ddboilerplate/Resources/Private/Language/Backend/locallang.xlf:constants.category.url
+
+# cat=plugin.tx_in2template_specific/url/0001; type=string; label=LLL:EXT:ddboilerplate/Resources/Private/Language/Backend/locallang.xlf:constants.category.url.baseurl
+BASEURL = www.fotografie-frei.de
+
+# anyone Release-Branch (Live-Server)
+[globalString = IENV:HTTP_HOST = ff.dirkdoering.de]
+	BASEURL = ff.dirkdoering.de
+[end]
+
+# BASEURLS FÜR LOKALE ENTWICKLUNGSINSTANZEN GEHÖREN IN DEN ORDER DEVELOPMENT !!!EINSELF
+
+# Maximale Bildbreit definieren
+styles.content.textmedia.maxW = 1920

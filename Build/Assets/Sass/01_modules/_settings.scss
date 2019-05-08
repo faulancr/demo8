@@ -1,0 +1,80 @@
+// Breakpoints
+
+$phone: 320px;
+$phone-5: 400px;
+$phablet: 600px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-wide: 1280px;
+$laptop-small: 1440px;
+$laptop: 1680px;
+$fullhd: 1920px;
+
+// Grid
+
+$container-width: $desktop-wide;
+
+// Default Distance Var
+$gutter: 1rem;
+$gutter-double: $gutter*2;
+$gutter-triple: $gutter*3;
+$gutter-five: $gutter*5;
+$gutter-max: $gutter*7.5;
+
+$gutter-phablet: $gutter-double;
+$gutter-desktop: $gutter-five;
+
+$gutter-dynamic: 2vw;
+
+
+// Generic spacing system
+
+$space-xs: .25rem;  // 4px
+$space-s: .5rem;    // 8px    $phone
+$space-m: 1rem;     // 16px   $tablet
+$space-l: 2rem;     // 32px   $desktop
+$space-xl: 4rem;    // 64px   $fullhd
+$space-default: $space-m;
+
+
+// Inset Spacing sued for "padding: $value;" to generate an inset of
+$space-inset-xs: $space-xs;
+$space-inset-s: $space-s;
+$space-inset-m: $space-m;
+$space-inset-l: $space-l;
+$space-inset-xl: $space-xl;
+$space-inset-default: $space-inset-m;
+
+$space-inline-xs: 0 .25rem .25rem 0;
+$space-inline-s: 0 .5rem 0 0;
+$space-inline-m: 0 1rem 0 0;
+$space-inline-l: 0 2rem 0 0;
+$space-inline-xl: 0 4rem 0 0;
+$space-inline-default: $space-inline-m;
+
+$space-stack-xs: 0 0 .25rem 0;
+$space-stack-s: 0 0 .5rem 0;
+$space-stack-m: 0 0 1rem 0;
+$space-stack-l: 0 0 2rem 0;
+$space-stack-xl: 0 0 4rem 0;
+$space-stack-default: $space-stack-m;
+
+$space-inset-squish-xs: .125rem .25rem;
+$space-inset-squish-s: .25rem .5rem;
+$space-inset-squish-m: .5rem 1rem;
+$space-inset-squish-l: 1rem 2rem;
+$space-inset-squish-xl: 2rem 4rem;
+$space-inset-squish-default: $space-inset-squish-m;
+
+
+
+// Photoswipe Vars
+$pswp__show-hide-transition-duration: 333ms !default;
+$pswp__controls-transition-duration: 333ms !default;
+$pswp__background-color: #fff !default;
+$pswp__placeholder-color: #fff !default;
+$pswp__box-sizing-border-box: true !default; // disable .pswp * { box-sizing:border-box } (in case you already have it in your site css)
+$pswp__root-z-index: 1500 !default;
+$pswp__assets-path: '' !default; // path to skin assets folder (preloader, PNG and SVG sprite)
+$pswp__error-text-color: #CCC !default; // "Image not loaded" text color
+$pswp__include-minimal-style: true !default;

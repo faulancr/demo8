@@ -1,0 +1,11 @@
+/**
+* Backendkonfiguration für die Standardeinstellung der Felder
+* Hier können die Defaultwerte beliebiger BE-Felder verändert werden.
+*/
+
+TCAdefaults {
+	# Spaltenmenge bei Bilder von 2 auf 1 stellen
+	tt_content {
+		imagecols = 1
+	}
+}

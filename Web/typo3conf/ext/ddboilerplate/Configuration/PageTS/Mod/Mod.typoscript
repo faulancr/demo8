@@ -1,0 +1,10 @@
+########################
+#### BACKENDLAYOUTS ####
+########################
+<INCLUDE_TYPOSCRIPT: source="DIR: EXT:ddboilerplate/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR: EXT:ddboilerplate/Configuration/PageTS/Mod/Wizards/NewContentElement" extensions="typoscript">
+
+mod.SHARED {
+	defaultLanguageFlag = de.gif
+	defaultLanguageLabel = deutsch
+}

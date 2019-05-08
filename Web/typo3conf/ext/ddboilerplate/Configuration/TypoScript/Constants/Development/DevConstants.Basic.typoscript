@@ -1,0 +1,13 @@
+
+# -------------
+# URL Handling
+# -------------
+
+
+# anyone Release-Branch (Live-Server)
+[globalString = IENV:HTTP_HOST = demo8.test]
+	BASEURL = demo8.test
+[end]
+
+# BASEURLS FÜR LOKALE ENTWICKLUNGSINSTANZEN GEHÖREN IN DEN ORDER DEVELOPMENT !!!EINSELF
+

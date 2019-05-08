@@ -1,0 +1,3 @@
+editor:
+  externalPlugins:
+    autocorrect: { resource: "EXT:ddboilerplate/Resources/Public/JavaScripts/Plugins/autocorrect/plugin.js" }

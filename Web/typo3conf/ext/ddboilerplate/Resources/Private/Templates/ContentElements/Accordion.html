@@ -1,0 +1,12 @@
+<div class="accordion">
+	<ul>
+		<f:for each="{data.pi_flexform.accordion}" as="element">
+			<li class="accordion__element">
+				<header class="accordion__title">{element.content.title}</header>
+				<div class="accordion__content accordion__content--closed">
+					{element.content.text -> f:format.raw()}
+				</div>
+			</li>
+		</f:for>
+	</ul>
+</div>

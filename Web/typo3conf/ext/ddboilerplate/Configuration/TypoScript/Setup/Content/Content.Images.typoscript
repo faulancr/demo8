@@ -1,0 +1,12 @@
+/**
+* Einstellungen für das Bilder-Rendering
+*/
+
+
+# Maximale Breite der Bilder
+styles.content.textmedia.maxW = {$SETTING.MAXIMAGEWIDTH}
+styles.content.textmedia.maxW = 1920
+tt_content.image.20.maxW = {$SETTING.MAXIMAGEWIDTH}
+tt_content.image.20.maxW = 1920
+
+

@@ -1,0 +1,16 @@
+/**
+* Einbinden der Datei für Typoscript-Konstanten
+*
+* Hier wird nur die BASIC-Datei eingebunden
+* das Einbinden der zusätzlichen Dateien findet dann
+* in der unten angegebenen Datei statt!
+*/
+
+# Konstanten für PAGE, CONFIG und andere systemweite Einstellungen
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Constants/Page" extensions="typoscript">
+
+# Includes von anderen Extensions und deren überschriebene Konstanten
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Constants/Extensions" extensions="typoscript">
+
+# TypoScript Dateien für die lokale Entwicklung (unversioniert)
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ddboilerplate/Configuration/TypoScript/Constants/Development" extensions="typoscript">

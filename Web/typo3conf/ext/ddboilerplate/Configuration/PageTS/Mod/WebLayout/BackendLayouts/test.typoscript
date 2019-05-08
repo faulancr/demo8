@@ -1,0 +1,31 @@
+#######################################################
+#### BACKENDLAYOUT: DEFAULT ####
+#######################################################
+mod {
+	web_layout {
+		BackendLayouts {
+			Test {
+				title = LLL:EXT:ddboilerplate/Resources/Private/Language/backend.xlf:backend_layout.default
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Content
+										colPos = 0
+										colspan = 1
+									}
+								}
+							}
+						}
+					}
+				}
+
+				icon = EXT:ddboilerplate/Resources/Public/Images/Backend/Layouts/Test.png
+			}
+		}
+	}
+}

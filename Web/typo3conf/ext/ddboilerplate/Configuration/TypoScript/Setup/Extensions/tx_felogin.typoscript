@@ -1,0 +1,8 @@
+
+# Setting "felogin" plugin TypoScript
+plugin.tx_felogin_pi1 {
+	# should a wrapper class be set for this content element
+	wrapContentInBaseClass = 0
+	templateFile = EXT:ddboilerplate/Resources/Private/Templates/Login/FrontendLogin.html
+	showPermaLogin = 1
+}

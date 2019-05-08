@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.layout} == 10">
+    <f:then>
+        <picture class="dd123">
+            <source srcset="{f:uri.image(image:file,width:'1920',cropVariant:'desktop')}" media="(min-width:1200)" />
+            <source srcset="{f:uri.image(image:file,width:'1200', cropVariant:'landscape')}" media="(min-width:768px)" />
+            <source srcset="{f:uri.image(image:file,width:'768', cropVariant:'tablet')}" media="(min-width:480px)" />
+            <source srcset="{f:uri.image(image:file,width:'480', cropVariant:'mobile')}" media="(min-width:0px)" />
+            <img class="image__picture"
+                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
+                 srcset="{f:uri.image(image:file, width:'1920')} 1920w,
+                        {f:uri.image(image:file, width:'1400')} 1400w,
+                        {f:uri.image(image:file, width:'960')} 960w,
+                        {f:uri.image(image:file, width:'640')} 640w,
+                        {f:uri.image(image:file, width:'320')} 320w"
+                 alt="{file.alternative}" />
+        </picture>
+    </f:then>
+    <f:else>
+        <img src="{f:uri.image(image:file, maxWidth:'1920')}"
+             srcset="{f:uri.image(image:file, maxWidth:'1920')} 1920w,
+                        {f:uri.image(image:file, maxWidth:'1400')} 1400w,
+                        {f:uri.image(image:file, maxWidth:'960')} 960w,
+                        {f:uri.image(image:file, maxWidth:'640')} 640w,
+                        {f:uri.image(image:file, maxWidth:'320')} 320w"
+             alt="{file.alternative}"
+             class="image__default"/>
+    </f:else>
+</f:if>
+</html>

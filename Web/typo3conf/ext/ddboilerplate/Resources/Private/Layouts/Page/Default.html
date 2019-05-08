@@ -1,0 +1,65 @@
+<f:render partial="Header" arguments="{_all}"/>
+<main id="page-{data.uid}" data-pid="{data.uid}" class="content">
+    <f:render section="Main"/>
+</main>
+<f:render partial="Footer"/>
+<div class="l-page-overlay">
+    <div class="l-page-loader">
+    <svg class="logo-loader" width="100px" height="100px" viewBox="0 0 100 100" version="1.1"
+         xmlns="http://www.w3.org/2000/svg">
+        <title>Dirk Döring</title>
+        <g fill="none" fill-rule="evenodd">
+            <path fill="#fff" d="M0,1.0658141e-13 L50,0 C83.3333333,0.750748213 100,17.4174149 100,50 C100,83.3333333 83.150702,100 49.4521061,100 L0,100 L0,1.0658141e-13 Z"/>
+            <path fill="#000" d="M20,20 L50,20 C70,20.4504489 80,30.4504489 80,50 C80,70 69.8904212,80 49.6712636,80 L20,80 L20,20 Z"/>
+            <path fill="#fff" d="M40,40 L50,40 C56.6666667,40.1501496 60,43.483483 60,50 C60,56.6666667 56.6301404,60 49.8904212,60 L40,60 L40,40 Z"/>
+        </g>
+    </svg>
+    </div>
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader-active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+/**
+* Backend-Layouts anzeigen und auswählbar machen
+*/
+
+# ID der Seite welche die Backend-Layouts enthalten
+# TODO: UID der Seite/Sysfolder mit den Backendlayouts eintragen
+TCEFORM.pages.backend_layout.PAGE_TSCONFIG_ID = 2
+TCEFORM.pages.backend_layout_next_level.PAGE_TSCONFIG_ID = 2
+
+# den Eintrag "none" im Auswahlfeld nicht anzeigen
+TCEFORM.pages.backend_layout_next_level.removeItems = -1
+TCEFORM.pages.backend_layout.removeItems = -1
+
+# Beschriftung des leeren Dropdown-Eintrags ändern
+TCEFORM.pages.backend_layout.altLabels.0 = Vordefiniertes Layout
